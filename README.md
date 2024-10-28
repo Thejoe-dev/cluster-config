@@ -1,1 +1,1 @@
-# Cluster-config
+# kuberenetes cluster config for thejoe.dev
