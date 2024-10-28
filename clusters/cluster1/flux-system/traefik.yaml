@@ -1,0 +1,79 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: HelmRepository
+metadata:
+  name: traefik
+  namespace: flux-system
+spec:
+  interval: 1m0s
+  url: https://helm.traefik.io/traefik
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: traefik
+  namespace: flux-system
+spec:
+  chart:
+    spec:
+      chart: traefik
+      sourceRef:
+        kind: HelmRepository
+        name: traefik
+      version: 10.24.3
+  interval: 1m0s
+  releaseName: traefik
+  targetNamespace: default
+  valuesFrom:
+    - kind: Secret
+      name: traefik-secret
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  creationTimestamp: null
+  name: traefik-secret
+  namespace: flux-system
+stringData:
+  values.yaml: |
+    additionalArguments:
+      - "--providers.kubernetescrd.allowCrossNamespace=true"
+      - "--certificatesresolvers.<le-name>.acme.tlschallenge"
+      - "--certificatesresolvers.<le-name>.acme.email=<someone@some-domain.com>"
+      - "--certificatesresolvers.<le-name>.acme.storage=/data/acme.json"
+      # Logging
+      - --log.level=info
+      - --log.format=json
+    service:
+      enabled: true
+      type: LoadBalancer
+      annotations:
+        helm.sh/resource-policy: keep
+        meta.helm.sh/release-name: traefik
+        meta.helm.sh/release-namespace: default
+    ports:
+      vault:
+        port: 8200
+        expose: true
+        exposedPort: 8200
+        protocol: TCP
+    persistence:
+      enabled: enable
+      name: data
+      accessMode: ReadWriteOnce
+      size: 1024Mi
+      path: /data
+    podSecurityContext:
+      fsGroup: null
+    deployment: 
+      initContainers:
+        - name: fix-data-dir-permissions
+          image: alpine:3.16.2
+          command:
+            - chown
+            - -R  
+            - 65532:65532
+            - /data
+          volumeMounts:
+            - name: data
+              mountPath: /data
