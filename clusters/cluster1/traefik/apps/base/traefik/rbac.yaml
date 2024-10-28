@@ -1,11 +1,10 @@
-# This provides rbac resources for thejoe.dev mesh
 ---
-Kind: ClusterRole
 apiVersion: rbac.authorization.k8s.io/v1
-metadata: 
+kind: ClusterRole
+metadata:
     name: traefik-ingress-controller
 rules:
-- apiGroups: 
+- apiGroups:
     - ""
   resources:
     - services
@@ -16,45 +15,43 @@ rules:
     - list
     - watch
 - apiGroups:
-        - extensions
-        - networking.k8s.io
+    - extensions
+    - networking.k8s.io
   resources:
-        - ingresses
-        - ingressclasses
+    - ingresses
+    - ingressclasses
   verbs:
-        - get
-        - list
-        - watch
+    - get
+    - list
+    - watch
 - apiGroups:
-        - extensions
+    - extensions
   resources:
-        - ingresses/status
+    - ingresses/status
   verbs:
-        - update
+    - update
 - apiGroups:
-        - traefik.containo.us
+    - traefik.containo.us
   resources:
-        - middlewares
-        - middlewaretcps
-        - ingressroutes
-        - traefikservices
-        - ingressroutetcps
-        - ingressrouteudps
-        - tlsoptions
-        - tlsstores
-        - serverstransports
+    - middlewares
+    - middlewaretcps
+    - ingressroutes
+    - traefikservices
+    - ingressroutetcps
+    - ingressrouteudps
+    - tlsoptions
+    - tlsstores
+    - serverstransports
   verbs:
-        - get
-        - list
-        - watch
-  
+    - get
+    - list
+    - watch
 ---
 kind: ServiceAccount
 apiVersion: v1
 metadata:
     name: traefik-ingress-controller
     namespace: traefik
-            
 ---
 kind: ClusterRoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
