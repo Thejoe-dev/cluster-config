@@ -2,4 +2,5 @@
 
 ## Namespaces / Services
 - Flux-system
-- Traefik
+- PodInfo - temp
+- Monitoring
