@@ -5,7 +5,7 @@ metadata:
   namespace: metallb
 spec:
   chartRef:
-    kind: HelmRepository
+    kind: HelmChart
     name: metallb
     namespace: metallb
   interval: 10m
