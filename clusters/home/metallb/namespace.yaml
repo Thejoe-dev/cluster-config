@@ -3,4 +3,4 @@ kind: Namespace
 metadata:
   name: metallb
   labels:
-    name: metallb
+    type: infrastructure
