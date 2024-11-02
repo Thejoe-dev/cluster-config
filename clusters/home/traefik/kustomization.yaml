@@ -5,3 +5,4 @@ resources:
 - traefik-repo.yaml
 - traefik-release.yaml
 - traefik-ingress.yaml
+- traefik-lb.yaml
