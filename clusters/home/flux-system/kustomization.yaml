@@ -3,7 +3,6 @@ kind: Kustomization
 resources:
 - gotk-components.yaml
 - gotk-sync.yaml
-- ingres-test.yaml
 - podinfo-release.yaml
 - podinfo-repo.yaml
 - traefik-repo.yaml
