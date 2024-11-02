@@ -1,10 +1,10 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta2
-kind: GitRepository
+kind: OCIRepository
 metadata:
   name: traefik
   namespace: flux-system
 spec:
   interval: 5m0s
-  url: https://traefik.github.io/charts
+  url: oci://ghcr.io/traefik/helm/traefik
   ref:
     tag: 33.0.0
