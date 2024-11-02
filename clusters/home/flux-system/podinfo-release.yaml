@@ -7,7 +7,7 @@ spec:
   chartRef:
     kind: HelmChart
     name: podinfo
-    namespace: flux-system
+    namespace: default
   interval: 10m
   values:
     replicaCount: 2
