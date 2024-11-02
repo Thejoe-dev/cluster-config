@@ -8,10 +8,10 @@ spec:
     - host: 
       http:
         paths:
-          - path: /bar
+          - path: /info
             pathType: Prefix
             backend:
               service:
                 name:  podinfo
                 port: 
-                  number: 9898
+                  number: 9999
