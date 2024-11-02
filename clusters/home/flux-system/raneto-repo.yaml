@@ -1,9 +1,9 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: GitRepository
 metadata:
-  name: traefik
+  name: raneto
 spec:
   interval: 5m0s
-  url: https://traefik.github.io/charts
+  url: https://gabisonfire.github.io/charts/
   ref:
-    tag: 33.0.0
+    tag: 0.1.2
