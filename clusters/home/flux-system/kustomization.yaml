@@ -5,7 +5,7 @@ resources:
 - gotk-sync.yaml
 - podinfo-release.yaml
 - podinfo-repo.yaml
-- traefik-repo.yaml
-- traefik-release.yaml
-- metallb-repo.yaml
-- metallb-release.yaml
+# - traefik-repo.yaml
+# - traefik-release.yaml
+# - metallb-repo.yaml
+# - metallb-release.yaml
