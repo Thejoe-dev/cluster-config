@@ -3,6 +3,8 @@ kind: HelmRelease
 metadata:
   name: traefik
   namespace: traefik
+  labels:
+    type: infrastructure
 spec:
   chartRef:
     kind: OCIRepository
@@ -10,4 +12,4 @@ spec:
     namespace: traefik
   interval: 10m
   values:
-    replicaCount: 2
+    replicaCount: 1
