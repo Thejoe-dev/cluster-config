@@ -4,3 +4,4 @@ resources:
 - namespace.yaml
 - traefik-repo.yaml
 - traefik-release.yaml
+- traefik-ingress.yaml
