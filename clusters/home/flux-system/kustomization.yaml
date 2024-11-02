@@ -6,7 +6,7 @@ resources:
 - podinfo-release.yaml
 - podinfo-repo.yaml
 - podinfo-chart.yaml
-# - traefik-repo.yaml
-# - traefik-release.yaml
+- traefik-repo.yaml
+- traefik-release.yaml
 # - metallb-repo.yaml
 # - metallb-release.yaml
