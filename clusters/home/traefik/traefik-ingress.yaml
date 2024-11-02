@@ -9,7 +9,7 @@ spec:
       http:
         paths:
           - path: /traefik
-            pathType: Exact
+            pathType: Prefix
             backend:
               service:
                 name:  traefik
