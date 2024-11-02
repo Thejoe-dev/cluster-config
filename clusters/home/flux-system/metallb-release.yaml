@@ -2,12 +2,12 @@ apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
   name: metallb
-  namespace: flux-system
+  namespace: metallb
 spec:
   chartRef:
-    kind: OCIRepository
+    kind: HelmRepository
     name: metallb
-    namespace: flux-system
+    namespace: metallb
   interval: 10m
   values:
     replicaCount: 2

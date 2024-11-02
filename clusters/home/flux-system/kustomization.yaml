@@ -8,5 +8,6 @@ resources:
 - podinfo-chart.yaml
 - traefik-repo.yaml
 - traefik-release.yaml
-# - metallb-repo.yaml
-# - metallb-release.yaml
+- metallb-repo.yaml
+- metallb-release.yaml
+- metallb-chart.yaml
