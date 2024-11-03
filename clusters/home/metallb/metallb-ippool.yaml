@@ -7,4 +7,4 @@ spec:
   # Production services will go here. Public IPs are expensive, so we leased
   # just 4 of them.
   addresses:
-    - 192.168.1.240-192.168.1.250
+  - 172.19.240.60-172.19.240.70
