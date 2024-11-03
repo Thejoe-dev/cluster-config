@@ -6,5 +6,5 @@ resources:
 - podinfo-release.yaml
 - podinfo-repo.yaml
 - podinfo-chart.yaml
-#- podinfo-ingress.yaml
+- podinfo-ingress.yaml
 #- podinfo-lb.yaml
