@@ -9,8 +9,8 @@ spec:
     - host: 
       http:
         paths:
-          - path: /
-            pathType: Prefix
+          - path: /info
+            pathType: Exact
             backend:
               service:
                 name:  podinfo
