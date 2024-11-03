@@ -5,7 +5,7 @@ metadata:
   namespace: default
 spec:
   selector:
-    name: podinfo
+    app: podinfo
   type: LoadBalancer
   # loadBalancerIP is optional. MetalLB will automatically allocate an IP from its pool if not
   # specified. You can also specify one manually.
