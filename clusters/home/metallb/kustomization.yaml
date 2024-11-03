@@ -5,4 +5,4 @@ resources:
 - metallb-repo.yaml
 - metallb-release.yaml
 - metallb-chart.yaml
-- metallb-ippool.yaml
+#- metallb-ippool.yaml
