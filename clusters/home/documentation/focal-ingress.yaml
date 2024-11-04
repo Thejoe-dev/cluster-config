@@ -2,7 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: focalboard-ingress
-  namespace: default
+  namespace: documentation
 spec:
   rules:
     - host:
@@ -12,6 +12,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name:  my-focalboard
+                name:  focalboard
                 port:
                   number: 8000

@@ -10,7 +10,7 @@ metadata:
     app.kubernetes.io/name: focalboard
     app.kubernetes.io/version: 0.9.0
   name: focalboard
-  namespace: focalboard
+  namespace: documentation
 spec:
   internalTrafficPolicy: Cluster
   ipFamilyPolicy: SingleStack

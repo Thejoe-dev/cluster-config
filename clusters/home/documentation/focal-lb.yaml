@@ -6,7 +6,7 @@ metadata:
   labels:
     app: focalboard
   name: focalboard-lb
-  namespace: default
+  namespace: documentation
 spec:
   allocateLoadBalancerNodePorts: true
   externalTrafficPolicy: Cluster
