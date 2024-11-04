@@ -6,4 +6,4 @@ resources:
 - focal-ingress.yaml
 - focal-lb.yaml
 - focal-service.yaml
-
+- focal-configmap.yaml
