@@ -3,8 +3,3 @@ kind: Kustomization
 resources:
 - gotk-components.yaml
 - gotk-sync.yaml
-- podinfo-release.yaml
-- podinfo-repo.yaml
-- podinfo-chart.yaml
-- podinfo-ingress.yaml
-#- podinfo-lb.yaml

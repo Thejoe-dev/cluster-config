@@ -1,18 +1,17 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: whoami-ingress
+  name: hello-ingress
   namespace: default
 spec:
-  ingressClassName: nginx
   rules:
-    - host: whoami.local
+    - host:
       http:
         paths:
-          - path: /whoami
-            pathType: Exact
+          - path: /hello
+            pathType: Prefix
             backend:
               service:
-                name:  whoami
-                port: 
+                name:  hello-server
+                port:
                   number: 80

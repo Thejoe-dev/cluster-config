@@ -1,13 +1,13 @@
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: HelmChart
 metadata:
-  name: podinfo
-  namespace: default
+  name: monitoring
+  namespace: monitoring
 spec:
   interval: 5m0s
-  chart: podinfo
+  chart: monitoring
   reconcileStrategy: ChartVersion
   sourceRef:
     kind: HelmRepository
-    name: podinfo
-  version: '6.*'
+    name: monitoring
+  version: '65.5.*'
