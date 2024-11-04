@@ -3,4 +3,7 @@ kind: Kustomization
 resources:
 - namespace.yaml
 - focal-deployment.yaml
+- focal-ingress.yaml
+- focal-lb.yaml
+- focal-service.yaml
 
