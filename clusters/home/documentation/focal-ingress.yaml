@@ -1,17 +1,17 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: whoami-ingress
-  namespace: whoami
+  name: focalboard-ingress
+  namespace: documentation
 spec:
   rules:
-    - host: whoami.local
+    - host:
       http:
         paths:
-          - path: /
+          - path: /focus
             pathType: Exact
             backend:
               service:
-                name:  whoami
+                name:  focalboard
                 port:
-                  number: 80
+                  number: 8000
